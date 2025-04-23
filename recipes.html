@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartMeal - Recipe Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #f6f1ff, #dccfff);
+      font-family: 'Poppins', sans-serif;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 0.2rem;
+      color: #5a2a4e;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #5f4c78;
+      margin-bottom: 1.5rem;
+    }
+
+    .search-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    input[type="text"] {
+      padding: 12px 16px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 280px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #5a2a4e;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #78385c;
+    }
+
+    #recipeResults {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .recipe {
+      background-color: #ffffffdd;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s;
+    }
+
+    .recipe:hover {
+      transform: scale(1.02);
+    }
+
+    .recipe h3 {
+      margin-top: 0;
+      color: #5a2a4e;
+    }
+  </style>
+</head>
+<body>
+  <h1>SmartMeal</h1>
+  <p>Enter the ingredients you have at home to discover matching recipes.</p>
+
+  <div class="search-bar">
+    <input type="text" id="ingredientsInput" placeholder="e.g. chicken, rice, onion">
+    <button onclick="findRecipes()">Find Recipes</button>
+  </div>
+
+  <div id="recipeResults"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
